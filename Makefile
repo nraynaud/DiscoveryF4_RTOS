@@ -5,6 +5,8 @@ SRCS += Source/portable/GCC/ARM_CM4F/port.c
 SRCS += Source/portable/MemMang/heap_1.c
 OBJS = $(SRCS:.c=.o)
 
+CFLAGS += -std=c99
+CFLAGS += -include stm32f4xx_conf.h
 CFLAGS += -ISource/include -ISource/portable/GCC/ARM_CM4F
 
 main.elf: $(SRCS)
