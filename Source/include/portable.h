@@ -1,5 +1,5 @@
 /*
-    FreeRTOS V7.1.1 - Copyright (C) 2012 Real Time Engineers Ltd.
+    FreeRTOS V7.2.0 - Copyright (C) 2012 Real Time Engineers Ltd.
 
 
     ***************************************************************************
@@ -317,10 +317,7 @@ portmacro.h has not yet been included - as every portmacro.h provides a
 portENTER_CRITICAL() definition.  Check the demo application for your demo
 to find the path to the correct portmacro.h file. */
 #ifndef portENTER_CRITICAL
-  
-  //#include "C:\FR\Source\portable\GCC\ARM_CM4F\portmacro.h"
-  //#include "C:/FR/Source/portable/GCC/ARM_CM4F/portmacro.h"
-        #include "../../Source/portable/GCC/ARM_CM4F/portmacro.h"	
+	#include "portmacro.h"	
 #endif
 	
 #if portBYTE_ALIGNMENT == 8

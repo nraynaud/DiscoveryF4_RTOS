@@ -57,7 +57,7 @@
 #define GCC_ARMCM4F
 
 #include "stm32f4xx.h"
-//#include "ustime.h"
+#include "ustime.h"
 
 /*-----------------------------------------------------------
  * Application specific definitions.
@@ -87,9 +87,9 @@
 #define configUSE_MUTEXES                       1
 
 #define configCHECK_FOR_STACK_OVERFLOW          0
-#define configGENERATE_RUN_TIME_STATS           0
-#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()  
-#define portGET_RUN_TIME_COUNTER_VALUE()            0
+#define configGENERATE_RUN_TIME_STATS               1
+#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS      init_us_timer
+#define portGET_RUN_TIME_COUNTER_VALUE              get_us_time
 
 #define configUSE_TIMERS                    1
 #define configTIMER_TASK_PRIORITY           3
